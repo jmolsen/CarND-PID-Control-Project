@@ -57,6 +57,12 @@ More information is only accessible by people who are already enrolled in Term 2
 of CarND. If you are enrolled, see [the project page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/f1820894-8322-4bb3-81aa-b26b3c6dcbaf/lessons/e8235395-22dd-4b87-88e0-d108c5e5bbf4/concepts/6a4d8d42-6a04-4aa6-b284-1697c0fd6562)
 for instructions and the project rubric.
 
+## Reflection Upon Completing Project
+
+I chose my values for P,I,D gain parameters manually. I started by using values for P,I,D from the example program we did in class. From there, I started adjusting based on the behavior of the car in the simulator.  Since the P, proprotional, part depends directly on CTE, I would decrease its gain parameter if it seemed that the car was overreacting to error and increase it if it wasn't responding to error quickly enough. The D, or differential, parameter can help with oscillations so if I saw the car was oscillating too much I would increase the gain paramter for D. I noticed that if I made it too large, it would overcompensate which also caused erratic driving. Finally, for the I, integral, gain parameter I would adjusted it if I saw error increasing over time. For the couple of laps I ran, there wasn't a lot of increasing error so the value I ended up with for the integral gain parameter was pretty small.
+
+Here's a [Link to a video of a successful run](./PID_Controller_Project.mpeg)
+
 ## Hints!
 
 * You don't have to follow this directory structure, but if you do, your work
